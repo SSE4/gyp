@@ -410,7 +410,8 @@ def _DetectVisualStudioVersions(versions_to_check, force_express):
       '11.0': '2012',
       '12.0': '2013',
       '14.0': '2015',
-      '15.0': '2017'
+      '15.0': '2017',
+      '16.0': '2019',
   }
   versions = []
   for version in versions_to_check:
@@ -484,6 +485,7 @@ def SelectVisualStudioVersion(version='auto', allow_fallback=True):
     '2013e': ('12.0',),
     '2015': ('14.0',),
     '2017': ('15.0',),
+    '2019': ('16.0',),
   }
   override_path = os.environ.get('GYP_MSVS_OVERRIDE_PATH')
   if override_path:
